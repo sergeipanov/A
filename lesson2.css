@@ -1,0 +1,70 @@
+.content-container {
+    display: flex;
+    align-items: stretch; /* This will stretch the button containers to the height of the SVG */
+    justify-content: center;
+    padding-top: 60px; /* Space from the nav bar */
+}
+
+.svg-container {
+    /* Adjust the SVG size and add margins if necessary */
+    min-width: 300px;
+    margin: 0 20px; /* Space between the SVG and the buttons */
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will distribute the buttons along the column */
+}
+
+.left-buttons {
+    align-items: flex-end; /* Aligns the buttons to the left side of the SVG */
+}
+
+.right-buttons {
+    align-items: flex-start; /* Aligns the buttons to the right side of the SVG */
+}
+
+button {
+    /* Styles for buttons */
+    margin-bottom: 10px; /* Spacing between buttons */
+    /* Other button styles */
+}
+
+/* Ensure the last button doesn't have a margin at the bottom */
+.buttons-container button:last-child {
+    margin-bottom: 0;
+}
+
+/* Hover Style for SVG Parts */
+#peg:hover, #nut:hover, /* other parts */ {
+    fill: #ffcc00; /* Example hover color */
+    cursor: pointer;
+}
+
+/* Style for the Information Box */
+.info-box {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    display: none; /* Hidden by default */
+    /* Add more styles for animation and positioning */
+}
+
+/* CSS Transition for Hover Effect */
+#peg:hover, #nut:hover, /* other parts */ {
+    transition: fill 0.3s ease;
+}
+
+/* CSS Animation for the Information Box */
+.info-box {
+    /* ... */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-box.show {
+    opacity: 1;
+}

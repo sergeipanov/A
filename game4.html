@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn Violin Fast</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn Violin Fast - An online resource designed to accelerate learning for violin students and teachers.">
+    <meta name="keywords" content="Violin, Music Learning, Violin Tutorials, Violin Games, Music Education">
+    <meta name="author" content="Learn Violin Fast">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html" id="home-button">Learn Violin Fast</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="games.html">Games</a>
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+    </nav>
+
+
+    <!-- Level Buttons Section -->
+    <section id="level-buttons-section" style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
+        <button class="game-button" data-level="1" onclick="loadLevel(1)">Level 1 - D and A string</button>
+        <button class="game-button" data-level="2" onclick="loadLevel(2)">Level 2 - E string</button>
+        <button class="game-button" data-level="3" onclick="loadLevel(3)">Level 3 - G string</button>
+        <button class="game-button" data-level="4" onclick="loadLevel(4)">Level 4 - G to E strings</button>
+    </section>
+
+<!-- Explanatory Text -->
+<div id="explanatory-text" style="text-align: center; margin-bottom: 20px;">
+    Identify the note name and finger that plays that note. Index is 1, Middle is 2, Ring is 3, and Pinky is 4.
+</div>
+
+<!-- Start Button -->
+<div id="start-button-container" style="text-align: center; margin-bottom: 20px;">
+    <button id="start-button">Start Game</button>
+</div>
+
+<!-- Music Container (initially hidden) -->
+<div id="music-container" style="display: none;"></div>
+
+    
+
+    <!-- Note buttons -->
+    <div id="buttons-container">
+        <button data-note="A">A</button>
+        <button data-note="B">B</button>
+        <button data-note="C">C</button>
+        <button data-note="D">D</button>
+        <button data-note="E">E</button>
+        <button data-note="F">F</button>
+        <button data-note="G">G</button>
+    </div>
+
+    <!-- Finger buttons -->
+    <div id="finger-buttons-container">
+        <button data-finger="0">0</button>
+        <button data-finger="1">1</button>
+        <button data-finger="2">2</button>
+        <button data-finger="3">3</button>
+        <button data-finger="4">4</button>
+    </div>
+
+    <!-- Music container where notes will be displayed -->
+    <div id="music-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/1.2.93/vexflow-min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

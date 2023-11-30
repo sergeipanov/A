@@ -1,0 +1,230 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all the child elements horizontally */
+    justify-content: flex-start; /* Aligns children to the top of the container */
+    height: 100vh;
+    padding-top: 60px; /* Padding at the top to account for the fixed navbar height */
+    margin: 0; /* Reset default margin */
+}
+
+/* Ensure the nav bar stays on top and is visible */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #414040; /* Dark background for the navbar */
+    z-index: 1000; /* High z-index to ensure it is above other content */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+#start-button {
+    margin-top: 20px; /* Adds some space between the nav bar and the button */
+    padding: 10px 20px; /* Adjust padding as needed */
+    /* Remove the width: 100%; if it's there */
+    display: inline-block; /* Allows the button to size according to its content */
+    text-align: center;
+    /* Optional: Set a max-width if you want to limit how wide the button can get */
+    max-width: 200px; /* Adjust as needed */
+    /* Center the button with auto margins */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for the buttons and their container */
+#buttons-container {
+    display: flex; /* Use flexbox for the button container */
+    justify-content: center; /* Center the buttons within the container */
+    flex-wrap: wrap; /* Wrap buttons if they don't fit on one line */
+    gap: 10px; /* Space between buttons */
+    margin: 20px 0; /* Space above and below the button container */
+}
+
+#buttons-container button,
+#finger-buttons-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Additional styles for #finger-buttons-container if needed */
+#finger-buttons-container {
+    display: flex;
+    justify-content: center;
+    /* ... other styles if needed ... */
+}
+
+/* Ensure no other styles are conflicting with the button alignment */
+
+#music-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically if needed */
+    width: 100%; /* Use full width to ensure centering within the body */
+    margin: 20px 0; /* Add some margin to separate from other elements */
+}
+
+/* If there's a specific width you want for the music example, you can set it here and remove it from the above */
+.music-example {
+    width: 200px; /* Example specific width */
+    margin: 0 auto; /* Auto margins for horizontal centering */
+}
+
+#about-section {
+    max-width: 800px; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding: 20px; /* Adds some padding inside the box */
+    text-align: center;
+}
+
+/* Optional: Style the image to fit well within the box */
+#about-section img {
+    max-width: 100%; /* Makes sure the image is not wider than the box */
+    height: auto; /* Keeps the image aspect ratio intact */
+    margin-bottom: 20px; /* Adds some space below the image */
+}
+
+#tutorials-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+/* ... other styles ... */
+
+.lesson {
+    display: flex; /* Use flexbox to allow inline layout */
+    align-items: center; /* Vertically align the items in the center */
+    margin-bottom: 10px; /* Increase space between lessons */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Assuming you want a white background for each lesson box */
+}
+
+.lesson-button {
+    background-color: #373e48;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Add some space between the button and the text */
+    flex: 0 0 120px; /* Sets the button width to 120px and prevents it from growing or shrinking */
+    height: 40px; /* Sets a fixed height for all buttons */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides any overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis to any text that overflows */
+}
+
+
+.lesson p {
+    margin: 0; /* Reset margins for the paragraph */
+    flex-grow: 1; /* Let the text take up the remaining space */
+    text-align: left; /* Align the text to the left */
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as necessary */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.game p {
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+#level-buttons-section {
+    margin-top: -40px; /* Adjust this to move the level buttons up or down */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between buttons */
+}
+
+/* Ensure level buttons don't overlap the nav */
+.game-button {
+    background-color: #373e48;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1em;
+    width: auto; /* Adjusted to auto to fit content */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Fixed width for consistency */
+}
+
+
+#game-display {
+    /* Style this section as needed to present the game content */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the game area */
+    text-align: center;
+    background-color: #fff; /* Optional: set a background color for the game area */
+    border: 1px solid #ccc; /* Optional: set a border for the game area */
+    border-radius: 5px;
+    min-height: 300px; /* Set a minimum height */
+}
+
+
+/* ... any other styles you need ... */
+.game-button.active-level {
+    background-color: #4CAF50; /* Example active color */
+    color: white;
+}
+
+.active-level {
+    /* Styles for active level button */
+    background-color: #4CAF50; /* Example: a green background for active level */
+    color: white;
+    /* Add other styles as necessary */
+}
+
+#explanatory-text {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px; /* Increase the margin-top value */
+}
+
+
+
+
